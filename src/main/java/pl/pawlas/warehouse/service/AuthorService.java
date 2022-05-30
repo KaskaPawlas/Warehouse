@@ -6,10 +6,11 @@ import pl.pawlas.warehouse.model.Author;
 import pl.pawlas.warehouse.repository.AuthorRepository;
 
 import javax.persistence.EntityNotFoundException;
+import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 @Service
+@Transactional
 public class AuthorService  {
 
     private final AuthorRepository authorRepository;
@@ -26,7 +27,7 @@ public class AuthorService  {
     }
 
     public void update(Author author){
-        authorRepository.saveAndFlush(author);
+        authorRepository.save(author);
     }
 
     public void delete(Long id){

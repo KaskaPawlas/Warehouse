@@ -20,9 +20,23 @@ public class Category {
     @Column(nullable = false, length = 256)
     private String name;
 
+    @Column(nullable = false)
     private LocalDateTime created;
 
     private LocalDateTime updated;
+
+    @ManyToOne
+    @JoinColumn(name = "product_product_id")
+    private Product product;
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
 
     @PrePersist
     public void prePersist() {
@@ -51,5 +65,21 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
+
+    public LocalDateTime getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(LocalDateTime updated) {
+        this.updated = updated;
     }
 }

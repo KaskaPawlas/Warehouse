@@ -27,8 +27,8 @@
                             <td>${category.id}</td>
                             <td>${category.name}</td>
                             <td>
-                                <a href="<c:url value="/author/delete/${category.id}"/>">Delete</a>
-                                <a href="<c:url value="/author/update/${category.id}"/>">Update</a>
+                                <a href="<c:url value="/category/delete/${category.id}"/>">Delete</a>
+                                <a href="<c:url value="/category/${category.id}"/>">Update</a>
                                 <a href="">Products</a>
                             </td>
                         </tr>

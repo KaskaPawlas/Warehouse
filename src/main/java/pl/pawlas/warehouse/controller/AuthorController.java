@@ -38,8 +38,8 @@ public class AuthorController {
         }
     }
 
-    @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
-    public String updateAuthorForm(@PathVariable Long id, Model model) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String getAuthorForm(@PathVariable Long id, Model model) {
         model.addAttribute("author", authorService.getById(id));
         return "author/update";
     }

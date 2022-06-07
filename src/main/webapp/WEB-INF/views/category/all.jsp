@@ -11,28 +11,25 @@
             <div class="card mb-4 container-fluid px-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Authors <a href="<c:url value="/author/add"/> ">Add new author</a>
+                    Authors <a href="<c:url value="/category/add"/> ">Add new category</a>
                 </div>
                 <table id="datatablesSimple">
 
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>First name</th>
-                        <th>Last Name</th>
-                        <th>Action</th>
+                        <th>Name</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${authors}" var="author">
+                    <c:forEach items="${categories}" var="category">
                         <tr>
-                            <td>${author.id}</td>
-                            <td>${author.firstName}</td>
-                            <td>${author.lastName}</td>
+                            <td>${category.id}</td>
+                            <td>${category.name}</td>
                             <td>
-                                <a href="<c:url value="/author/delete/${author.id}"/>">Delete</a>
-                                <a href="<c:url value="/author/update/${author.id}"/>">Update</a>
-                                <a href="">Books</a>
+                                <a href="<c:url value="/author/delete/${category.id}"/>">Delete</a>
+                                <a href="<c:url value="/author/update/${category.id}"/>">Update</a>
+                                <a href="">Products</a>
                             </td>
                         </tr>
                     </c:forEach>

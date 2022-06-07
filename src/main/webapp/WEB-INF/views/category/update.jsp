@@ -20,22 +20,16 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Update author</h3></div>
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Update category</h3></div>
                             <div class="card-body">
-                                <c:url var="update_url" value="/author/update"/>
-                                <form:form modelAttribute="author" action="${update_url}">
+                                <c:url var="update_url" value="/category/update"/>
+                                <form:form modelAttribute="category" action="${update_url}">
                                     <form:hidden path="id"/>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputFirstName" type="text" placeholder="Enter author's first name"  path="firstName"/>
-                                                <label for="inputFirstName">First name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <form:input class="form-control" id="inputLastName" type="text" placeholder="Enter author's last name"  path="lastName"/>
-                                                <label for="inputLastName">Last name</label>
+                                                <form:input class="form-control"  id="inputFirstName" type="text" placeholder="Enter category's name"  path="name"/>
+                                                <label for="inputFirstName">Name</label>
                                             </div>
                                         </div>
                                     </div>

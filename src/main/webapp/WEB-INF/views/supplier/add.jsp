@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -39,7 +39,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <form:select class="form-control" id="inputType" items="${supplierType}" placeholder="Choose suppplier's type"  path="type"/>
+                                                <form:select class="form-control"  id="inputType" items="${supplierType}" placeholder="Choose suppplier's type"  path="type"/>
                                                 <label for="inputType">Type</label>
                                             </div>
                                         </div>

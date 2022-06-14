@@ -46,6 +46,7 @@ public class SupplierController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String getSupplierForm(Model model, @PathVariable Long id) {
+        model.addAttribute("supplierType", SupplierType.values());
         model.addAttribute("supplier", supplierService.getById(id));
         return "supplier/update";
     }

@@ -27,7 +27,7 @@ public class Product {
 
     @NotNull
     @Size(max = 13)
-    @Column(length = 13, nullable = false)
+    @Column(length = 13, nullable = false, unique = true)
     private String isbn;
 
 
@@ -36,7 +36,7 @@ public class Product {
     @Column(name = "product_type")
     private ProductType productType;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "author_id")
     private Author author;
 

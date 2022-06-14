@@ -14,14 +14,11 @@ public class Author {
     private Long id;
 
     @NotBlank
-    @Size(max = 100)
-    @Column(name = "first_name", nullable = false, length = 100)
-    private String firstName;
+    @Size(max = 256)
+    @Column(name = "name", nullable = false, length = 256, unique = true)
+    private String name;
 
-    @NotBlank
-    @Size(max = 100)
-    @Column(name = "last_name", nullable = false, length = 100)
-    private String lastName;
+
 
     private LocalDateTime created;
 
@@ -50,20 +47,13 @@ public class Author {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public LocalDateTime getCreated() {

@@ -27,44 +27,44 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputName" type="text" placeholder="Enter product's title"  path="title"/>
-                                                <label for="inputName">Title</label>
+                                                <form:input class="form-control"  id="inputTitle" type="text" placeholder="Enter product's title"  path="title"/>
+                                                <label for="inputTitle">Title</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputName" type="textarea" placeholder="Enter product's description"  path="description"/>
-                                                <label for="inputName">Description</label>
+                                                <form:input class="form-control"  id="inputDescription" type="textarea" placeholder="Enter product's description"  path="description"/>
+                                                <label for="inputDescription">Description</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputName" type="text" placeholder="Enter product's isbn"  path="isbn"/>
-                                                <label for="inputName">ISBN</label>
+                                                <form:input class="form-control"  id="inputIsbn" type="text" placeholder="Enter product's isbn"  path="isbn"/>
+                                                <label for="inputIsbn">ISBN</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:select class="form-control"  id="inputName" items="${productTypes}" placeholder="Choose product's type"  path="productType"/>
-                                                <label for="inputName">Type</label>
+                                                <form:select class="form-control"  id="inputType" items="${type}" placeholder="Choose product's type"  path="productType"/>
+                                                <label for="inputType">Type</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:select class="form-control"  id="inputName" itemValue="id" itemLabel="lastName" items="${productAuthor}" placeholder="Choose product's author"  path="author"/>
-                                                <label for="inputName">Author</label>
+                                                <form:select class="form-control"  id="inputAuthor" itemValue="id" itemLabel="name" items="${author}" placeholder="Enter product's author"  path="author"/>
+                                                <label for="inputAuthor">Author</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:select class="form-control"  id="inputName" itemValue="id" itemLabel="name" items="${productCategory}" placeholder="Choose product's categpry"  path="category"/>
-                                                <label for="inputName">Category</label>
+                                                <form:select class="form-control"  id="inputCategory"  itemValue="id" itemLabel="name" items="${category}" placeholder="Choose product's categpry"  path="category"/>
+                                                <label for="inputCategory">Category</label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:select class="form-control"  id="inputName" itemValue="id" itemLabel="name" items="${productSupplier}" placeholder="Choose product's supplier"  path="supplier"/>
-                                                <label for="inputName">Supplier</label>
+                                                <form:select class="form-control"  id="inputSupplier" itemValue="id" itemLabel="name" items="${supplier}" placeholder="Choose product's supplier"  path="supplier"/>
+                                                <label for="inputSupplier">Supplier</label>
                                             </div>
                                         </div>
                                     </div>

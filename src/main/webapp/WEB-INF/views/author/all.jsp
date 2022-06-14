@@ -18,8 +18,7 @@
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>First name</th>
-                        <th>Last Name</th>
+                        <th>Name</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -27,12 +26,11 @@
                     <c:forEach items="${authors}" var="author">
                         <tr>
                             <td>${author.id}</td>
-                            <td>${author.firstName}</td>
-                            <td>${author.lastName}</td>
+                            <td>${author.name}</td>
                             <td>
                                 <a href="<c:url value="/author/delete/${author.id}"/>">Delete</a>
                                 <a href="<c:url value="/author/${author.id}"/>">Update</a>
-                                <a href="">Books</a>
+                                <a href="<c:url value="/product/all/author/${author.id}"/>">Books</a>
                             </td>
                         </tr>
                     </c:forEach>

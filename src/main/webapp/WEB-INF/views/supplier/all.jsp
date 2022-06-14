@@ -11,7 +11,7 @@
             <div class="card mb-4 container-fluid px-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Authors <a href="<c:url value="/supplier/add"/> ">Add new supplier</a>
+                    Suppliers <a href="<c:url value="/supplier/add"/> ">Add new supplier</a>
                 </div>
                 <table id="datatablesSimple">
                     <thead>
@@ -33,7 +33,7 @@
                             <td>
                                 <a href="<c:url value="/supplier/delete/${supplier.id}"/>">Delete</a>
                                 <a href="<c:url value="/supplier/${supplier.id}"/>">Update</a>
-                                <a href="">Products</a>
+                                <a href="<c:url value="/product/all/supplier/${supplier.id}"/>">Products</a>
                             </td>
                         </tr>
                     </c:forEach>

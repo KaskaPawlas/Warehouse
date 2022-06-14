@@ -49,8 +49,8 @@ public class ProductService {
         return productRepository.findAllByCategory_Id(categoryId);
     }
 
-    public List<Product> findBySupplier(SupplierType supplierType){
-        return productRepository.findAllBySupplier_Type(supplierType);
+    public List<Product> findBySupplier(Long supplierId){
+        return productRepository.findAllBySupplier_Id(supplierId);
     }
 
     public List<Product> findByProductType(ProductType productType){

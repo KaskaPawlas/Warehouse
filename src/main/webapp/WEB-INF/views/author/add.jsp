@@ -27,20 +27,13 @@
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputFirstName" type="text" placeholder="Enter author's first name"  path="firstName"/>
-                                                <label for="inputFirstName">First name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <form:input class="form-control" id="inputLastName" type="text" placeholder="Enter author's last name"  path="lastName"/>
-                                                <label for="inputLastName">Last name</label>
+                                                <form:input class="form-control"  id="inputName" type="text" placeholder="Enter author's name"  path="name"/>
+                                                <label for="inputName">Name</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-4 mb-0">
                                             <div class="d-grid"><input type="submit" class="btn btn-primary btn-block" value="Save"/></div>
-
                                     </div>
                                 </form:form>
                             </div>

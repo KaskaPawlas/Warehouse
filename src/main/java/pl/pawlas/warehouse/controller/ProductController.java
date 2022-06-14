@@ -47,10 +47,10 @@ public class ProductController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addProductForm(Model model) {
-        model.addAttribute("productAuthor", authorService.findAll());
-        model.addAttribute("productCategory", categoryService.findAll());
-        model.addAttribute("productTypes", ProductType.values());
-        model.addAttribute("productSupplier", supplierService.findAll());
+        model.addAttribute("category", categoryService.findAll());
+        model.addAttribute("type", ProductType.values());
+        model.addAttribute("supplier", supplierService.findAll());
+        model.addAttribute("author", authorService.findAll());
         model.addAttribute("product", new Product());
         return "product/add";
     }
@@ -68,7 +68,11 @@ public class ProductController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String getProductForm(@PathVariable Long id, Model model) {
         model.addAttribute("product", productService.getById(id));
-        return "author/update";
+        model.addAttribute("category", categoryService.findAll());
+        model.addAttribute("type", ProductType.values());
+        model.addAttribute("supplier", supplierService.findAll());
+        model.addAttribute("author", authorService.findAll());
+        return "product/update";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -93,23 +97,23 @@ public class ProductController {
         return "product/all";
     }
 
-    @RequestMapping(value = "/all/{authorId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/all/author/{authorId}", method = RequestMethod.GET)
     public String findAllByAuthor(Model model, @PathVariable Long authorId) {
         model.addAttribute("products", productService.findByAuthor(authorId));
         return "product/all";
     }
 
-    @RequestMapping(value = "/all/{categoryId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/all/category/{categoryId}", method = RequestMethod.GET)
     public String findAllByCategory(Model model, @PathVariable Long categoryId) {
-        model.addAttribute("products", productService.findAll());
+        model.addAttribute("products", productService.findByCategory(categoryId));
         return "product/all";
     }
 
-//    @RequestMapping(value = "/all", method = RequestMethod.GET)
-//    public String findAllBySupplierType(Model model){
-//        model.addAttribute("products", productService.findBySupplier(supplierType));
-//        return "product/all";
-//    }
+    @RequestMapping(value = "/all/supplier/{supplierId}", method = RequestMethod.GET)
+    public String findAllBySupplier(Model model, @PathVariable Long supplierId){
+        model.addAttribute("products", productService.findBySupplier(supplierId));
+        return "product/all";
+    }
 //    @RequestMapping(value = "/all", method = RequestMethod.GET)
 //    public String findAllByProductType(Model model){
 //        model.addAttribute("products", productService.findByProductType(productType));

@@ -11,28 +11,29 @@
             <div class="card mb-4 container-fluid px-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Categories <a href="<c:url value="/category/add"/> ">Add new category</a>
-
+                    Suppliers <a href="<c:url value="/supplier/add"/> ">Add new supplier</a>
                 </div>
                 <table id="datatablesSimple">
-
                     <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>NIP</th>
+                        <th>Type</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${categories}" var="category">
+                    <c:forEach items="${suppliers}" var="supplier">
                         <tr>
-                            <td>${category.id}</td>
-                            <td>${category.name}</td>
+                            <td>${supplier.id}</td>
+                            <td>${supplier.name}</td>
+                            <td>${supplier.nip}</td>
+                            <td>${supplier.type}</td>
                             <td>
-
-                                <a href="<c:url value="/category/delete/${category.id}"/>">Delete</a>
-                                <a href="<c:url value="/category/${category.id}"/>">Update</a>
-                                <a href="<c:url value="/product/all/category/${category.id}"/>">Books</a>
-
+                                <a href="<c:url value="/supplier/delete/${supplier.id}"/>">Delete</a>
+                                <a href="<c:url value="/supplier/${supplier.id}"/>">Update</a>
+                                <a href="<c:url value="/product/all/supplier/${supplier.id}"/>">Products</a>
                             </td>
                         </tr>
                     </c:forEach>

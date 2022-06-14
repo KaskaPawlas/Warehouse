@@ -25,11 +25,13 @@
                                 <c:url var="update_url" value="/category/update"/>
                                 <form:form modelAttribute="category" action="${update_url}">
                                     <form:hidden path="id"/>
+                                    <form:hidden path="created"/>
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputFirstName" type="text" placeholder="Enter category's name"  path="name"/>
-                                                <label for="inputFirstName">Name</label>
+                                                <form:input class="form-control"  id="inputName" type="text" placeholder="Enter category's name"  path="name"/>
+                                                <label for="inputName">Name</label>
+
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +53,7 @@
         <footer class="py-4 bg-light mt-auto">
             <div class="container-fluid px-4">
                 <div class="d-flex align-items-center justify-content-between small">
-                    <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                    <div class="text-muted">Copyright &copy; Katarzyna Pawlas 2022</div>
                     <div>
                         <a href="#">Privacy Policy</a>
                         &middot;

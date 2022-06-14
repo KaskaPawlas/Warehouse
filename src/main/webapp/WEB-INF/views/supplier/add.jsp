@@ -1,7 +1,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,19 +21,32 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Add author</h3></div>
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Add supplier</h3></div>
                             <div class="card-body">
-                                <form:form method="post" modelAttribute="author">
+                                <form:form method="post" modelAttribute="supplier">
                                     <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:input class="form-control"  id="inputName" type="text" placeholder="Enter author's name"  path="name"/>
+                                                <form:input class="form-control"  id="inputName" type="text" placeholder="Enter supplier name"  path="name"/>
                                                 <label for="inputName">Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <form:input class="form-control" id="inputNip" type="text" placeholder="Enter suppplier's NIP"  path="nip"/>
+                                                <label for="inputNip">NIP</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <form:select class="form-control"  id="inputType" items="${supplierType}" placeholder="Choose suppplier's type"  path="type"/>
+                                                <label for="inputType">Type</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mt-4 mb-0">
-                                            <div class="d-grid"><input type="submit" class="btn btn-primary btn-block" value="Save"/></div>
+                                        <div class="d-grid"><input type="submit" class="btn btn-primary btn-block" value="Save"/></div>
+
                                     </div>
                                 </form:form>
                             </div>

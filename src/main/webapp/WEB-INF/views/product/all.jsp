@@ -11,29 +11,37 @@
             <div class="card mb-4 container-fluid px-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                    Authors <a href="<c:url value="/author/add"/> ">Add new author</a>
+                    Products <a href="<c:url value="/product/add"/> ">Add new product</a>
                 </div>
                 <table id="datatablesSimple">
 
                     <thead>
                     <tr>
                         <th>ID</th>
-
-                        <th>Name</th>
-
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Type</th>
+                        <th>Supplier</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${authors}" var="author">
+                    <c:forEach items="${products}" var="product">
                         <tr>
-                            <td>${author.id}</td>
-                            <td>${author.name}</td>
+                            <td>${product.id}</td>
+                            <td>${product.title}</td>
+                            <td>${product.author.name}</td>
+                            <td>${product.isbn}</td>
+                            <td>${product.description}</td>
+                            <td>${product.category.name}</td>
+                            <td>${product.productType}</td>
+                            <td>${product.supplier.name}</td>
                             <td>
-                                <a href="<c:url value="/author/delete/${author.id}"/>">Delete</a>
-                                <a href="<c:url value="/author/${author.id}"/>">Update</a>
-                                <a href="<c:url value="/product/all/author/${author.id}"/>">Books</a>
-
+                                <a href="<c:url value="/product/delete/${product.id}"/>">Delete</a>
+                                <a href="<c:url value="/product/${product.id}"/>">Update</a>
                             </td>
                         </tr>
                     </c:forEach>

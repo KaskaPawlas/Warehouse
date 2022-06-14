@@ -18,7 +18,9 @@
                     <thead>
                     <tr>
                         <th>ID</th>
+
                         <th>Name</th>
+
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -31,6 +33,7 @@
                                 <a href="<c:url value="/author/delete/${author.id}"/>">Delete</a>
                                 <a href="<c:url value="/author/${author.id}"/>">Update</a>
                                 <a href="<c:url value="/product/all/author/${author.id}"/>">Books</a>
+
                             </td>
                         </tr>
                     </c:forEach>

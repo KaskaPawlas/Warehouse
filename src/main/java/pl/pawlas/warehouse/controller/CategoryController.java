@@ -39,6 +39,7 @@ public class CategoryController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public String getCategoryForm(Model model, @PathVariable Long id){
+
         model.addAttribute("category", categoryService.getById(id));
         return "category/update";
     }

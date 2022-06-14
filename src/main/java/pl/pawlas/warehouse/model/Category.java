@@ -17,13 +17,16 @@ public class Category {
 
     @NotBlank
     @Size(max = 256)
+
     @Column(nullable = false, length = 256, unique = true)
     private String name;
 
     @Column(nullable = false)
+
     private LocalDateTime created;
 
     private LocalDateTime updated;
+
 
     @ManyToOne
     @JoinColumn(name = "product_product_id")
@@ -82,4 +85,5 @@ public class Category {
     public void setUpdated(LocalDateTime updated) {
         this.updated = updated;
     }
+
 }

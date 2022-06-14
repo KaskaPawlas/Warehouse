@@ -31,6 +31,7 @@
                                             <div class="form-floating mb-3 mb-md-0">
                                                 <form:input class="form-control"  id="inputName" type="text" placeholder="Enter category's name"  path="name"/>
                                                 <label for="inputName">Name</label>
+
                                             </div>
                                         </div>
                                     </div>

@@ -12,6 +12,7 @@
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
                     Categories <a href="<c:url value="/category/add"/> ">Add new category</a>
+
                 </div>
                 <table id="datatablesSimple">
 
@@ -27,9 +28,11 @@
                             <td>${category.id}</td>
                             <td>${category.name}</td>
                             <td>
+
                                 <a href="<c:url value="/category/delete/${category.id}"/>">Delete</a>
                                 <a href="<c:url value="/category/${category.id}"/>">Update</a>
                                 <a href="<c:url value="/product/all/category/${category.id}"/>">Books</a>
+
                             </td>
                         </tr>
                     </c:forEach>

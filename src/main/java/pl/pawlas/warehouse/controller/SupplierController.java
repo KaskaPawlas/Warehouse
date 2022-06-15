@@ -18,7 +18,7 @@ public class SupplierController {
 
     private final SupplierService supplierService;
 
-    private enum SupplierType{
+    private enum SupplierType {
         WHOLESALER,
         PUBLISHER
     }

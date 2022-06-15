@@ -31,7 +31,9 @@ public class ProductController {
         PUZZLE,
         BOARD_GAME,
         TOY
-    };
+    }
+
+    ;
 
     private final CategoryService categoryService;
 
@@ -110,7 +112,7 @@ public class ProductController {
     }
 
     @RequestMapping(value = "/all/supplier/{supplierId}", method = RequestMethod.GET)
-    public String findAllBySupplier(Model model, @PathVariable Long supplierId){
+    public String findAllBySupplier(Model model, @PathVariable Long supplierId) {
         model.addAttribute("products", productService.findBySupplier(supplierId));
         return "product/all";
     }

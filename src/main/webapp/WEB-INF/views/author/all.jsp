@@ -32,7 +32,7 @@
                             <td>
                                 <a href="<c:url value="/author/delete/${author.id}"/>">Delete</a>
                                 <a href="<c:url value="/author/${author.id}"/>">Update</a>
-                                <a href="<c:url value="/product/all/author/${author.id}"/>">Books</a>
+                                <a href="<c:url value="/product/all/author/${author.id}"/>">Products</a>
 
                             </td>
                         </tr>

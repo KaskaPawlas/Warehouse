@@ -27,20 +27,6 @@ public class Category {
 
     private LocalDateTime updated;
 
-
-    @ManyToOne
-    @JoinColumn(name = "product_product_id")
-    private Product product;
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-
     @PrePersist
     public void prePersist() {
         created = LocalDateTime.now();

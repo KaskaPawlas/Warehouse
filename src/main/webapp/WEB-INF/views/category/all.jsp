@@ -31,7 +31,7 @@
 
                                 <a href="<c:url value="/category/delete/${category.id}"/>">Delete</a>
                                 <a href="<c:url value="/category/${category.id}"/>">Update</a>
-                                <a href="<c:url value="/product/all/category/${category.id}"/>">Books</a>
+                                <a href="<c:url value="/product/all/category/${category.id}"/>">Products</a>
 
                             </td>
                         </tr>

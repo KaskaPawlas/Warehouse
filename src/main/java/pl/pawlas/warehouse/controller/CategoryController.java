@@ -22,14 +22,14 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addCategoryForm(Model model){
+    public String addCategoryForm(Model model) {
         model.addAttribute("category", new Category());
         return "category/add";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addCategory(@Valid Category category, BindingResult result){
-        if(result.hasErrors()){
+    public String addCategory(@Valid Category category, BindingResult result) {
+        if (result.hasErrors()) {
             return "category/add";
         } else {
             categoryService.save(category);
@@ -38,15 +38,15 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String getCategoryForm(Model model, @PathVariable Long id){
+    public String getCategoryForm(Model model, @PathVariable Long id) {
 
         model.addAttribute("category", categoryService.getById(id));
         return "category/update";
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public String updateCategory(@Valid Category category, BindingResult result){
-        if(result.hasErrors()){
+    public String updateCategory(@Valid Category category, BindingResult result) {
+        if (result.hasErrors()) {
             return "category/update";
         } else {
             categoryService.update(category);
@@ -55,13 +55,13 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String delete(@PathVariable Long id){
+    public String delete(@PathVariable Long id) {
         categoryService.delete(id);
         return "redirect:/category/all";
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public String findAll(Model model){
+    public String findAll(Model model) {
         model.addAttribute("categories", categoryService.findAll());
         return "category/all";
     }

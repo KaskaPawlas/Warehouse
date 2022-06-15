@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
-                                                <form:select class="form-control"  id="inputAuthor" itemValue="id" itemLable="name" items="${author}" placeholder="Enter product's author"  path="author"/>
+                                                <form:select class="form-control"  id="inputAuthor" itemValue="id" itemLable="name" items="${author}" placeholder="Choose product's author"  path="author"/>
                                                 <label for="inputAuthor">Author</label>
                                             </div>
                                         </div>

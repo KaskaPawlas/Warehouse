@@ -55,13 +55,13 @@ public class AuthorController {
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String delete(@PathVariable Long id){
+    public String delete(@PathVariable Long id) {
         authorService.delete(id);
         return "redirect:/author/all";
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public String findAll(Model model){
+    public String findAll(Model model) {
         model.addAttribute("authors", authorService.findAll());
         return "author/all";
     }

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Register - SB Admin</title>
+    <title>SB Admin</title>
     <link href="<c:url value="/resources/css/styles.css"/>" rel="stylesheet" />
     <script src="<c:url value="https://use.fontawesome.com/releases/v6.1.0/js/all.js"/> " crossorigin="anonymous"></script>
 </head>
